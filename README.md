@@ -51,12 +51,12 @@ Screenshots
 Project Structure
 ___________________
 InfinionWeatherApp/
-├── data/         # Data sources, Retrofit services, models
-├── di/           # Dependency injection modules
-├── repository/   # Repository layer
-├── ui/           # Jetpack Compose UI (screens, components)
-├── viewmodel/    # ViewModels for business logic
-└── utils/        # Utility classes/helpers
+- data/         # Data sources, Retrofit services, models
+- di/           # Dependency injection modules
+- repository/   # Repository layer
+- ui/           # Jetpack Compose UI (screens, components)
+- viewmodel/    # ViewModels for business logic
+- utils/        # Utility classes/helpers
 
 Getting Started - Prerequisites
 -----------------------------------

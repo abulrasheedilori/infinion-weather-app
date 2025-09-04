@@ -1,7 +1,7 @@
 package com.isoft.infinionweatherapp;
 
-import com.isoft.infinionweatherapp.data.vm.WeatherViewModel_HiltModules;
 import com.isoft.infinionweatherapp.di.AppModule;
+import com.isoft.infinionweatherapp.vm.WeatherViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;

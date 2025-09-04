@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.isoft.infinionweatherapp.data.vm.WeatherViewModel
+import com.isoft.infinionweatherapp.vm.WeatherViewModel
 import com.isoft.infinionweatherapp.ui.screens.DetailsScreen
 import com.isoft.infinionweatherapp.ui.screens.HomeScreen
 import com.isoft.infinionweatherapp.ui.screens.SplashScreen

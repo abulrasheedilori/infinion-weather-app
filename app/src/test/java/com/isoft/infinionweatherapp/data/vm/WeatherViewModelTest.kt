@@ -4,6 +4,7 @@ import app.cash.turbine.test
 import com.isoft.infinionweatherapp.data.repository.InfinionWeatherRepository
 import com.isoft.infinionweatherapp.model.*
 import com.isoft.infinionweatherapp.util.MainDispatcherRule
+import com.isoft.infinionweatherapp.vm.WeatherViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.advanceUntilIdle

@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
-import com.isoft.infinionweatherapp.data.vm.WeatherViewModel
+import com.isoft.infinionweatherapp.vm.WeatherViewModel
 import com.isoft.infinionweatherapp.ui.navigation.NavGraph
 import dagger.hilt.android.AndroidEntryPoint
 

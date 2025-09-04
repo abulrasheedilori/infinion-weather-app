@@ -1,6 +1,5 @@
 package com.isoft.infinionweatherapp.ui.screens
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,13 +19,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.isoft.infinionweatherapp.R
-import com.isoft.infinionweatherapp.data.vm.WeatherViewModel
+import com.isoft.infinionweatherapp.vm.WeatherViewModel
 import com.isoft.infinionweatherapp.model.WeatherUiState
 import com.isoft.infinionweatherapp.ui.screens.common.WeatherIcon
 
@@ -64,7 +61,7 @@ fun DetailsScreen(navController: NavController, viewModel: WeatherViewModel, cit
             }
 
             WeatherUiState.Idle -> Text(
-                "No data. Search on Home.",
+                "No data. Search for real city names.",
                 color = Color.White,
                 style = MaterialTheme.typography.bodyLarge
             )

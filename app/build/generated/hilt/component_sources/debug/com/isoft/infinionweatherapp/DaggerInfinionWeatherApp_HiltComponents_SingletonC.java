@@ -9,12 +9,12 @@ import androidx.lifecycle.ViewModel;
 import com.isoft.infinionweatherapp.data.api.InfinionWeatherApiService;
 import com.isoft.infinionweatherapp.data.datastore.DataStoreManager;
 import com.isoft.infinionweatherapp.data.repository.InfinionWeatherRepository;
-import com.isoft.infinionweatherapp.data.vm.WeatherViewModel;
-import com.isoft.infinionweatherapp.data.vm.WeatherViewModel_HiltModules;
 import com.isoft.infinionweatherapp.di.AppModule_ProvideDataStoreFactory;
 import com.isoft.infinionweatherapp.di.AppModule_ProvideRepositoryFactory;
 import com.isoft.infinionweatherapp.di.AppModule_ProvideRetrofitFactory;
 import com.isoft.infinionweatherapp.di.AppModule_ProvideWeatherApiFactory;
+import com.isoft.infinionweatherapp.vm.WeatherViewModel;
+import com.isoft.infinionweatherapp.vm.WeatherViewModel_HiltModules;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
@@ -376,7 +376,7 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
 
     @Override
     public Map<Class<?>, Boolean> getViewModelKeys() {
-      return LazyClassKeyMap.<Boolean>of(Collections.<String, Boolean>singletonMap(LazyClassKeyProvider.com_isoft_infinionweatherapp_data_vm_WeatherViewModel, WeatherViewModel_HiltModules.KeyModule.provide()));
+      return LazyClassKeyMap.<Boolean>of(Collections.<String, Boolean>singletonMap(LazyClassKeyProvider.com_isoft_infinionweatherapp_vm_WeatherViewModel, WeatherViewModel_HiltModules.KeyModule.provide()));
     }
 
     @Override
@@ -396,10 +396,10 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_isoft_infinionweatherapp_data_vm_WeatherViewModel = "com.isoft.infinionweatherapp.data.vm.WeatherViewModel";
+      static String com_isoft_infinionweatherapp_vm_WeatherViewModel = "com.isoft.infinionweatherapp.vm.WeatherViewModel";
 
       @KeepFieldType
-      WeatherViewModel com_isoft_infinionweatherapp_data_vm_WeatherViewModel2;
+      WeatherViewModel com_isoft_infinionweatherapp_vm_WeatherViewModel2;
     }
   }
 
@@ -430,7 +430,7 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
 
     @Override
     public Map<Class<?>, javax.inject.Provider<ViewModel>> getHiltViewModelMap() {
-      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(Collections.<String, javax.inject.Provider<ViewModel>>singletonMap(LazyClassKeyProvider.com_isoft_infinionweatherapp_data_vm_WeatherViewModel, ((Provider) weatherViewModelProvider)));
+      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(Collections.<String, javax.inject.Provider<ViewModel>>singletonMap(LazyClassKeyProvider.com_isoft_infinionweatherapp_vm_WeatherViewModel, ((Provider) weatherViewModelProvider)));
     }
 
     @Override
@@ -440,10 +440,10 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_isoft_infinionweatherapp_data_vm_WeatherViewModel = "com.isoft.infinionweatherapp.data.vm.WeatherViewModel";
+      static String com_isoft_infinionweatherapp_vm_WeatherViewModel = "com.isoft.infinionweatherapp.vm.WeatherViewModel";
 
       @KeepFieldType
-      WeatherViewModel com_isoft_infinionweatherapp_data_vm_WeatherViewModel2;
+      WeatherViewModel com_isoft_infinionweatherapp_vm_WeatherViewModel2;
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -467,7 +467,7 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.isoft.infinionweatherapp.data.vm.WeatherViewModel 
+          case 0: // com.isoft.infinionweatherapp.vm.WeatherViewModel 
           return (T) new WeatherViewModel(singletonCImpl.provideRepositoryProvider.get());
 
           default: throw new AssertionError(id);

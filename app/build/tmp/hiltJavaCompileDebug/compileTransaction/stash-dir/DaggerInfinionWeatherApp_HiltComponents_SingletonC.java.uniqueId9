@@ -8,10 +8,11 @@ import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import com.isoft.infinionweatherapp.data.api.InfinionWeatherApiService;
 import com.isoft.infinionweatherapp.data.datastore.DataStoreManager;
-import com.isoft.infinionweatherapp.data.repository.InfinionWeatherRepositoryImpl;
+import com.isoft.infinionweatherapp.data.repository.InfinionWeatherRepository;
 import com.isoft.infinionweatherapp.data.vm.WeatherViewModel;
 import com.isoft.infinionweatherapp.data.vm.WeatherViewModel_HiltModules;
 import com.isoft.infinionweatherapp.di.AppModule_ProvideDataStoreFactory;
+import com.isoft.infinionweatherapp.di.AppModule_ProvideRepositoryFactory;
 import com.isoft.infinionweatherapp.di.AppModule_ProvideRetrofitFactory;
 import com.isoft.infinionweatherapp.di.AppModule_ProvideWeatherApiFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
@@ -467,7 +468,7 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
       public T get() {
         switch (id) {
           case 0: // com.isoft.infinionweatherapp.data.vm.WeatherViewModel 
-          return (T) new WeatherViewModel(singletonCImpl.infinionWeatherRepositoryImplProvider.get());
+          return (T) new WeatherViewModel(singletonCImpl.provideRepositoryProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -555,7 +556,7 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
 
     private Provider<DataStoreManager> provideDataStoreProvider;
 
-    private Provider<InfinionWeatherRepositoryImpl> infinionWeatherRepositoryImplProvider;
+    private Provider<InfinionWeatherRepository> provideRepositoryProvider;
 
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
@@ -568,11 +569,11 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
       this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 2));
       this.provideWeatherApiProvider = DoubleCheck.provider(new SwitchingProvider<InfinionWeatherApiService>(singletonCImpl, 1));
       this.provideDataStoreProvider = DoubleCheck.provider(new SwitchingProvider<DataStoreManager>(singletonCImpl, 3));
-      this.infinionWeatherRepositoryImplProvider = DoubleCheck.provider(new SwitchingProvider<InfinionWeatherRepositoryImpl>(singletonCImpl, 0));
+      this.provideRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<InfinionWeatherRepository>(singletonCImpl, 0));
     }
 
     @Override
-    public void injectInfinionWeatherApp(InfinionWeatherApp arg0) {
+    public void injectInfinionWeatherApp(InfinionWeatherApp infinionWeatherApp) {
     }
 
     @Override
@@ -604,8 +605,8 @@ public final class DaggerInfinionWeatherApp_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.isoft.infinionweatherapp.data.repository.InfinionWeatherRepositoryImpl 
-          return (T) new InfinionWeatherRepositoryImpl(singletonCImpl.provideWeatherApiProvider.get(), singletonCImpl.provideDataStoreProvider.get());
+          case 0: // com.isoft.infinionweatherapp.data.repository.InfinionWeatherRepository 
+          return (T) AppModule_ProvideRepositoryFactory.provideRepository(singletonCImpl.provideWeatherApiProvider.get(), singletonCImpl.provideDataStoreProvider.get());
 
           case 1: // com.isoft.infinionweatherapp.data.api.InfinionWeatherApiService 
           return (T) AppModule_ProvideWeatherApiFactory.provideWeatherApi(singletonCImpl.provideRetrofitProvider.get());

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.isoft.infinionweatherapp.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-29T22:24:46" hostname="Abdulrasheeds-MacBook-Pro.local" time="0.002">
+<testsuite name="com.isoft.infinionweatherapp.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-04T13:18:34" hostname="Abdulrasheeds-MacBook-Pro.local" time="0.005">
   <properties/>
-  <testcase name="addition_isCorrect" classname="com.isoft.infinionweatherapp.ExampleUnitTest" time="0.002"/>
+  <testcase name="addition_isCorrect" classname="com.isoft.infinionweatherapp.ExampleUnitTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

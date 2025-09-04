@@ -45,7 +45,7 @@ Screenshots
   ![App Screenshot](screenshots/details_screen.png)
 
 - Unit Test Screenshot
-  ![App Screenshot](screenshots/test_screenshot.png)
+  ![App Screenshot](screenshots/unit_test_screenshot.png)
 
 
 Project Structure

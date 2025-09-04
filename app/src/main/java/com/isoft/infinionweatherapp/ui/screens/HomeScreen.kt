@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.isoft.infinionweatherapp.BuildConfig
-import com.isoft.infinionweatherapp.data.vm.WeatherViewModel
+import com.isoft.infinionweatherapp.vm.WeatherViewModel
 
 @Composable
 fun HomeScreen(navController: NavController, viewModel: WeatherViewModel) {
